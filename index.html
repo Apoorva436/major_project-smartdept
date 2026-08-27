@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMARTDEPT — Run Your Department. Automatically.</title>
+  <meta name="description" content="Plan, approve, execute and analyze every departmental activity from one intelligent platform. SMARTDEPT automates your department operations end-to-end." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- ─── NAVBAR ─── -->
+  <nav id="navbar" class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="SMARTDEPT Home">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect width="28" height="28" rx="7" fill="url(#logo-grad)" />
+            <path d="M8 14h4v6H8zM12 10h4v10h-4zM16 8h4v12h-4z" fill="#fff" opacity=".9"/>
+            <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#4F6EF7"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="logo-text">SMART<span class="logo-accent">DEPT</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#security">Security</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#cta-final" class="btn btn-ghost">Log In</a>
+        <a href="#cta-final" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <header id="hero" class="hero">
+    <div class="hero-bg">
+      <div class="grid-pattern"></div>
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Enterprise Department Management
+        </div>
+        <h1 class="hero-headline reveal">
+          Run Your Department.<br /><span class="text-gradient">Automatically.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Plan, approve, execute and analyze every departmental activity from one intelligent platform.
+        </p>
+        <div class="hero-ctas reveal">
+          <a href="#cta-final" class="btn btn-primary btn-lg">
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#how-it-works" class="btn btn-outline btn-lg">
+            Explore Platform
+          </a>
+        </div>
+        <div class="hero-proof reveal">
+          <div class="proof-avatars">
+            <span class="avatar" style="background:#4F6EF7">A</span>
+            <span class="avatar" style="background:#8B5CF6">R</span>
+            <span class="avatar" style="background:#06B6D4">K</span>
+            <span class="avatar" style="background:#10B981">S</span>
+          </div>
+          <p class="proof-text">Trusted by <strong>200+</strong> departments across enterprises</p>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="dashboard-preview">
+          <div class="dash-topbar">
+            <div class="dash-dots"><span></span><span></span><span></span></div>
+            <span class="dash-title">SMARTDEPT Dashboard</span>
+            <div class="dash-actions">
+              <span class="dash-search-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.2"/><path d="M9.5 9.5L13 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="dash-body">
+            <div class="dash-sidebar">
+              <div class="dash-nav-item active"><span class="nav-icon">📊</span> Overview</div>
+              <div class="dash-nav-item"><span class="nav-icon">📋</span> Requests</div>
+              <div class="dash-nav-item"><span class="nav-icon">✅</span> Approvals</div>
+              <div class="dash-nav-item"><span class="nav-icon">📈</span> Analytics</div>
+              <div class="dash-nav-item"><span class="nav-icon">⚙️</span> Settings</div>
+            </div>
+            <div class="dash-main">
+              <div class="dash-stats">
+                <div class="stat-card">
+                  <span class="stat-label">Active Requests</span>
+                  <span class="stat-value counter" data-target="147">0</span>
+                  <span class="stat-trend up">↑ 12%</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Approved Today</span>
+                  <span class="stat-value counter" data-target="38">0</span>
+                  <span class="stat-trend up">↑ 8%</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-label">Budget Used</span>
+                  <span class="stat-value">64<small>%</small></span>
+                  <span class="stat-trend neutral">On track</span>
+                </div>
+              </div>
+              <div class="dash-chart">
+                <div class="chart-header">
+                  <span>Department Activity</span>
+                  <span class="chart-period">Last 30 days</span>
+                </div>
+                <div class="chart-area">
+                  <svg class="chart-svg" viewBox="0 0 400 120" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#4F6EF7" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#4F6EF7" stop-opacity="0.02"/>
+                      </linearGradient>
+                    </defs>
+                    <path class="chart-line" d="M0,100 C30,90 60,70 100,60 C140,50 170,80 200,55 C230,30 260,40 300,25 C340,10 370,20 400,15" fill="none" stroke="#4F6EF7" stroke-width="2.5"/>
+                    <path class="chart-fill-path" d="M0,100 C30,90 60,70 100,60 C140,50 170,80 200,55 C230,30 260,40 300,25 C340,10 370,20 400,15 L400,120 L0,120Z" fill="url(#chart-fill)"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="dash-activity">
+                <div class="activity-item">
+                  <span class="activity-dot" style="background:#10B981"></span>
+                  <span class="activity-text">Budget request #1042 approved</span>
+                  <span class="activity-time">2m ago</span>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-dot" style="background:#F59E0B"></span>
+                  <span class="activity-text">Procurement pending review</span>
+                  <span class="activity-time">15m ago</span>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-dot" style="background:#4F6EF7"></span>
+                  <span class="activity-text">Q3 report auto-generated</span>
+                  <span class="activity-time">1h ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── PROBLEM ─── -->
+  <section id="problem" class="section section-problem">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Problem</span>
+        <h2 class="section-title">Departments Don't Fail From Lack of Talent.<br /><span class="text-muted">They Fail From Lack of Systems.</span></h2>
+        <p class="section-desc">Manual processes, disconnected tools, and approval bottlenecks drain productivity and create blind spots across your organization.</p>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M12 12l8 8M20 12l-8 8" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Scattered Workflows</h3>
+          <p>Requests live in email threads, spreadsheets, and chat messages — nothing is centralized or trackable.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="3" stroke="#F59E0B" stroke-width="1.5"/><path d="M4 14h24M10 19h6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Approval Bottlenecks</h3>
+          <p>Critical requests sit idle for days waiting on a single person. No escalation, no visibility, no accountability.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24V12l8-6 8 6v12" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 24v-6h6v6" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Zero Visibility</h3>
+          <p>Leaders can't see what's happening in real-time. Decisions are made on gut feeling, not data.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="#06B6D4" stroke-width="1.5"/><path d="M16 11v5l3.5 3.5" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Wasted Time</h3>
+          <p>Teams spend hours on repetitive reporting and status updates instead of meaningful work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SOLUTION ─── -->
+  <section id="solution" class="section section-solution">
+    <div class="container">
+      <div class="solution-layout">
+        <div class="solution-text reveal">
+          <span class="section-tag">The Solution</span>
+          <h2 class="section-title">One Platform.<br />Every Department.<br /><span class="text-gradient">Total Automation.</span></h2>
+          <p class="section-desc">SMARTDEPT replaces fragmented tools with a single intelligent system that automates planning, approvals, execution, and reporting — so your department runs itself.</p>
+          <ul class="solution-checks">
+            <li><span class="check">✓</span> Unified request and approval engine</li>
+            <li><span class="check">✓</span> AI-powered analytics and forecasting</li>
+            <li><span class="check">✓</span> Role-based access for every stakeholder</li>
+            <li><span class="check">✓</span> Automated compliance and audit trails</li>
+          </ul>
+        </div>
+        <div class="solution-visual reveal">
+          <div class="solution-graphic">
+            <div class="sg-ring sg-ring--outer"></div>
+            <div class="sg-ring sg-ring--middle"></div>
+            <div class="sg-ring sg-ring--inner"></div>
+            <div class="sg-center">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#logo-grad2)"/><path d="M12 20h5v8h-5zM17 15h5v13h-5zM22 12h5v16h-5z" fill="#fff" opacity=".9"/><defs><linearGradient id="logo-grad2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#4F6EF7"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs></svg>
+            </div>
+            <div class="sg-node sg-node--1"><span>Plan</span></div>
+            <div class="sg-node sg-node--2"><span>Approve</span></div>
+            <div class="sg-node sg-node--3"><span>Execute</span></div>
+            <div class="sg-node sg-node--4"><span>Track</span></div>
+            <div class="sg-node sg-node--5"><span>Report</span></div>
+            <div class="sg-node sg-node--6"><span>AI</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section id="how-it-works" class="section section-how">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">From Request to Report.<br /><span class="text-muted">In Minutes, Not Weeks.</span></h2>
+        <p class="section-desc">SMARTDEPT digitizes your department's entire operational lifecycle into six seamless stages.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Define Objectives</h3>
+            <p>Set department goals, allocate budgets, and configure policies — the platform adapts to your structure.</p>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Submit Requests</h3>
+            <p>Team members submit structured requests through guided forms with auto-classification and validation.</p>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Intelligent Routing</h3>
+            <p>Requests are automatically routed to the right approvers based on rules, hierarchies, and thresholds.</p>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>One-Click Approvals</h3>
+            <p>Approvers review contextual summaries, AI recommendations, and approve or escalate with a single action.</p>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h3>Automated Execution</h3>
+            <p>Approved requests trigger workflows: procurement, scheduling, notifications, and downstream tasks — all automated.</p>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="step-number">06</div>
+          <div class="step-content">
+            <h3>Live Analytics</h3>
+            <p>Real-time dashboards surface trends, bottlenecks, and projections so leaders always have the full picture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─── -->
+  <section id="features" class="section section-features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Core Features</span>
+        <h2 class="section-title">Everything Your Department<br /><span class="text-gradient">Actually Needs.</span></h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 14l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Smart Request Forms</h3>
+          <p>Dynamic forms that adapt based on request type, department, and policy — no more email chaos.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Multi-Level Approvals</h3>
+          <p>Configure sequential, parallel, or conditional approval chains with automatic escalation rules.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 22v-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Budget Tracking</h3>
+          <p>Real-time budget monitoring with automated alerts when spending approaches thresholds.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Document Vault</h3>
+          <p>Centralized, searchable document storage with version control and access permissions.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Live Dashboards</h3>
+          <p>Customizable dashboards with real-time KPIs, charts, and departmental health scores.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-rose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Team Collaboration</h3>
+          <p>Built-in comments, mentions, and activity feeds keep everyone aligned without external tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WORKFLOW ─── -->
+  <section id="workflow" class="section section-workflow">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Automation Workflow</span>
+        <h2 class="section-title">Six Stages. Zero Manual Steps.<br /><span class="text-gradient">Pure Automation.</span></h2>
+        <p class="section-desc">Every action flows through an intelligent pipeline — from initial planning to final reporting.</p>
+      </div>
+      <div class="workflow-pipeline">
+        <div class="pipeline-track">
+          <div class="pipeline-line"></div>
+          <div class="pipeline-line-fill" id="pipeline-fill"></div>
+        </div>
+        <div class="pipeline-stages">
+          <div class="pipeline-stage reveal" data-stage="1">
+            <div class="stage-marker">
+              <div class="stage-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="stage-content">
+              <h3>PLAN</h3>
+              <p>Define objectives, set budgets, assign responsibilities, and configure department policies.</p>
+            </div>
+          </div>
+          <div class="pipeline-stage reveal" data-stage="2">
+            <div class="stage-marker">
+              <div class="stage-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="stage-content">
+              <h3>REQUEST</h3>
+              <p>Submit structured, validated requests through intelligent forms that auto-classify and route.</p>
+            </div>
+          </div>
+          <div class="pipeline-stage reveal" data-stage="3">
+            <div class="stage-marker">
+              <div class="stage-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="stage-content">
+              <h3>APPROVE</h3>
+              <p>Smart routing delivers requests to the right stakeholders with AI-assisted recommendations.</p>
+            </div>
+          </div>
+          <div class="pipeline-stage reveal" data-stage="4">
+            <div class="stage-marker">
+              <div class="stage-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="stage-content">
+              <h3>EXECUTE</h3>
+              <p>Approved actions trigger automated workflows — procurement, scheduling, and notifications.</p>
+            </div>
+          </div>
+          <div class="pipeline-stage reveal" data-stage="5">
+            <div class="stage-marker">
+              <div class="stage-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+            <div class="stage-content">
+              <h3>TRACK</h3>
+              <p>Monitor every request, task, and milestone in real-time with full audit trails.</p>
+            </div>
+          </div>
+          <div class="pipeline-stage reveal" data-stage="6">
+            <div class="stage-marker">
+              <div class="stage-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="stage-content">
+              <h3>REPORT</h3>
+              <p>Auto-generated reports with AI summaries, trends, and actionable insights delivered on schedule.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ANALYTICS ─── -->
+  <section id="analytics" class="section section-analytics">
+    <div class="container">
+      <div class="analytics-layout">
+        <div class="analytics-text reveal">
+          <span class="section-tag">Analytics Preview</span>
+          <h2 class="section-title">Decisions Backed by<br /><span class="text-gradient">Real-Time Intelligence.</span></h2>
+          <p class="section-desc">Go beyond static reports. SMARTDEPT surfaces patterns, predicts bottlenecks, and delivers actionable intelligence — not just data.</p>
+          <div class="analytics-highlights">
+            <div class="ah-item">
+              <span class="ah-value">3.2×</span>
+              <span class="ah-label">Faster Decision Cycles</span>
+            </div>
+            <div class="ah-item">
+              <span class="ah-value">94%</span>
+              <span class="ah-label">Approval Automation</span>
+            </div>
+            <div class="ah-item">
+              <span class="ah-value">68%</span>
+              <span class="ah-label">Less Manual Reporting</span>
+            </div>
+          </div>
+        </div>
+        <div class="analytics-visual reveal">
+          <div class="analytics-cards">
+            <div class="a-card a-card--main">
+              <div class="a-card-header">
+                <span>Department Performance</span>
+                <span class="a-card-badge">Live</span>
+              </div>
+              <div class="a-card-chart">
+                <div class="bar-chart">
+                  <div class="bar" style="--h:85%"><span>HR</span></div>
+                  <div class="bar" style="--h:72%"><span>Ops</span></div>
+                  <div class="bar" style="--h:91%"><span>IT</span></div>
+                  <div class="bar" style="--h:68%"><span>Fin</span></div>
+                  <div class="bar" style="--h:78%"><span>Mkt</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="a-card a-card--side a-card--top">
+              <div class="a-card-header"><span>Request Volume</span></div>
+              <div class="a-mini-chart">
+                <svg viewBox="0 0 120 40" preserveAspectRatio="none">
+                  <polyline points="0,35 20,28 40,30 60,15 80,20 100,8 120,12" fill="none" stroke="#4F6EF7" stroke-width="2"/>
+                </svg>
+              </div>
+              <span class="a-card-stat">1,247 <small>this month</small></span>
+            </div>
+            <div class="a-card a-card--side a-card--bottom">
+              <div class="a-card-header"><span>Avg. Approval Time</span></div>
+              <div class="a-donut">
+                <svg viewBox="0 0 60 60">
+                  <circle cx="30" cy="30" r="24" fill="none" stroke="#1e293b" stroke-width="6"/>
+                  <circle cx="30" cy="30" r="24" fill="none" stroke="#10B981" stroke-width="6" stroke-dasharray="113" stroke-dashoffset="28" stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                </svg>
+                <span class="donut-label">2.4h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AI CAPABILITIES ─── -->
+  <section id="ai" class="section section-ai">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">AI Capabilities</span>
+        <h2 class="section-title">Intelligence That Works<br /><span class="text-gradient">While You Sleep.</span></h2>
+        <p class="section-desc">SMARTDEPT's AI engine doesn't just assist — it anticipates, recommends, and automates.</p>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card ai-card--wide reveal">
+          <div class="ai-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Predictive Routing</h3>
+          <p>AI learns approval patterns and pre-routes requests to the most likely approver, reducing cycle time by up to 60%.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Smart Summaries</h3>
+          <p>Auto-generated request summaries and executive briefs save hours of manual review.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Anomaly Detection</h3>
+          <p>Flag unusual spending patterns, duplicate requests, and policy violations before they cause issues.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Trend Forecasting</h3>
+          <p>Predict budget utilization, resource needs, and seasonal demand patterns months in advance.</p>
+        </div>
+        <div class="ai-card ai-card--wide reveal">
+          <div class="ai-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Natural Language Reports</h3>
+          <p>Ask questions in plain English — "How much did Marketing spend on events last quarter?" — and get instant, formatted answers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ROLE-BASED EXPERIENCE ─── -->
+  <section id="roles" class="section section-roles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Role-Based Experience</span>
+        <h2 class="section-title">Built for Every Stakeholder.<br /><span class="text-muted">Tailored for Each Role.</span></h2>
+      </div>
+      <div class="roles-grid">
+        <div class="role-card reveal">
+          <div class="role-avatar ra-blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Department Heads</h3>
+          <p>Full visibility into budgets, team performance, and pending actions. Executive dashboards and one-click approvals.</p>
+          <ul class="role-perks">
+            <li>Executive overview dashboard</li>
+            <li>Budget allocation controls</li>
+            <li>Team performance metrics</li>
+          </ul>
+        </div>
+        <div class="role-card reveal">
+          <div class="role-avatar ra-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Team Members</h3>
+          <p>Simple, guided workflows to submit requests, track status, and access department resources without training.</p>
+          <ul class="role-perks">
+            <li>Guided request submission</li>
+            <li>Real-time status tracking</li>
+            <li>Resource library access</li>
+          </ul>
+        </div>
+        <div class="role-card reveal">
+          <div class="role-avatar ra-green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Administrators</h3>
+          <p>Full platform control: policies, roles, integrations, audit logs, and compliance configurations.</p>
+          <ul class="role-perks">
+            <li>Policy & workflow builder</li>
+            <li>Integration management</li>
+            <li>Compliance & audit tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECURITY ─── -->
+  <section id="security" class="section section-security">
+    <div class="container">
+      <div class="security-layout">
+        <div class="security-visual reveal">
+          <div class="security-graphic">
+            <div class="shield-outer">
+              <div class="shield-inner">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="url(#shield-g)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="url(#shield-g)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="shield-g" x1="4" y1="2" x2="20" y2="22"><stop stop-color="#4F6EF7"/><stop offset="1" stop-color="#10B981"/></linearGradient></defs></svg>
+              </div>
+            </div>
+            <div class="sec-badge sec-badge--1">AES-256</div>
+            <div class="sec-badge sec-badge--2">SOC 2</div>
+            <div class="sec-badge sec-badge--3">RBAC</div>
+            <div class="sec-badge sec-badge--4">MFA</div>
+          </div>
+        </div>
+        <div class="security-text reveal">
+          <span class="section-tag">Enterprise Security</span>
+          <h2 class="section-title">Security That Never<br /><span class="text-gradient">Compromises.</span></h2>
+          <p class="section-desc">Built from the ground up with enterprise-grade security, compliance, and data protection.</p>
+          <div class="security-features">
+            <div class="sf-item">
+              <div class="sf-icon">🔐</div>
+              <div>
+                <h4>End-to-End Encryption</h4>
+                <p>AES-256 encryption at rest and TLS 1.3 in transit. Your data never leaves your control.</p>
+              </div>
+            </div>
+            <div class="sf-item">
+              <div class="sf-icon">🛡️</div>
+              <div>
+                <h4>Role-Based Access Control</h4>
+                <p>Granular permissions ensure every user sees only what they're authorized to access.</p>
+              </div>
+            </div>
+            <div class="sf-item">
+              <div class="sf-icon">📋</div>
+              <div>
+                <h4>Complete Audit Trails</h4>
+                <p>Every action is logged, timestamped, and immutable — ready for any compliance review.</p>
+              </div>
+            </div>
+            <div class="sf-item">
+              <div class="sf-icon">✅</div>
+              <div>
+                <h4>Compliance Ready</h4>
+                <p>SOC 2 Type II certified with GDPR and HIPAA controls built in.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FINAL CTA ─── -->
+  <section id="cta-final" class="section section-cta">
+    <div class="cta-bg">
+      <div class="grid-pattern"></div>
+      <div class="cta-glow cta-glow--1"></div>
+      <div class="cta-glow cta-glow--2"></div>
+    </div>
+    <div class="container cta-content reveal">
+      <h2 class="cta-title">Ready to Run Your Department<br /><span class="text-gradient">on Autopilot?</span></h2>
+      <p class="cta-desc">Join hundreds of departments already saving thousands of hours with SMARTDEPT.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-white btn-lg">
+          Get Started Free
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" class="btn btn-ghost-light btn-lg">Schedule a Demo</a>
+      </div>
+      <p class="cta-note">No credit card required · Free 14-day trial · Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="url(#logo-grad3)"/><path d="M8 14h4v6H8zM12 10h4v10h-4zM16 8h4v12h-4z" fill="#fff" opacity=".9"/><defs><linearGradient id="logo-grad3" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#4F6EF7"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs></svg>
+            </span>
+            <span class="logo-text">SMART<span class="logo-accent">DEPT</span></span>
+          </a>
+          <p class="footer-tagline">Intelligent department management for modern enterprises.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#workflow">Workflow</a></li>
+              <li><a href="#analytics">Analytics</a></li>
+              <li><a href="#ai">AI Engine</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">API Reference</a></li>
+              <li><a href="#">Status</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SMARTDEPT. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
