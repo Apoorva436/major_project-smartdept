@@ -7,30 +7,15 @@ export const SidebarProvider = ({ children }) => {
     return localStorage.getItem('smartdept-sidebar-collapsed') === 'true';
   });
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [currentRole, setCurrentRole] = useState(() => {
-    return localStorage.getItem('smartdept-role') || 'hod';
-  });
   const [activeNav, setActiveNav] = useState('dashboard');
 
   useEffect(() => {
     localStorage.setItem('smartdept-sidebar-collapsed', isCollapsed);
   }, [isCollapsed]);
 
-  useEffect(() => {
-    localStorage.setItem('smartdept-role', currentRole);
-  }, [currentRole]);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(prev => !prev);
-  };
-
-  const toggleMobile = () => {
-    setIsMobileOpen(prev => !prev);
-  };
-
-  const closeMobile = () => {
-    setIsMobileOpen(false);
-  };
+  const toggleCollapse = () => setIsCollapsed((prev) => !prev);
+  const toggleMobile   = () => setIsMobileOpen((prev) => !prev);
+  const closeMobile    = () => setIsMobileOpen(false);
 
   return (
     <SidebarContext.Provider
@@ -40,8 +25,6 @@ export const SidebarProvider = ({ children }) => {
         isMobileOpen,
         toggleMobile,
         closeMobile,
-        currentRole,
-        setCurrentRole,
         activeNav,
         setActiveNav,
       }}

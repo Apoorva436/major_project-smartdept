@@ -12,34 +12,39 @@ import {
   User,
   Shield,
   Layers,
+  Mail,
+  Building,
 } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useSidebar } from '../../contexts/SidebarContext';
 import { useCommandPalette } from '../../contexts/CommandPaletteContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { Avatar } from '../ui/Avatar';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const ROLE_LABELS = {
+  HOD: 'Head of Department',
+  FACULTY: 'Faculty',
+  STUDENT: 'Student',
+  ADMIN: 'System Administrator',
+};
+
 export const Topbar = ({ onOpenNotifications, onOpenHelp }) => {
   const { theme, toggleTheme } = useTheme();
-  const { toggleMobile, currentRole, setCurrentRole } = useSidebar();
+  const { toggleMobile } = useSidebar();
   const { openPalette } = useCommandPalette();
+  const { user: authUser, logout } = useAuth();
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
-  const getRoleUser = () => {
-    switch (currentRole) {
-      case 'student':
-        return { name: 'Priya Sharma', role: 'Student (CS-2026)', avatar: 'Priya' };
-      case 'faculty':
-        return { name: 'Prof. David Chen', role: 'Associate Professor', avatar: 'David' };
-      case 'admin':
-        return { name: 'Admin Console', role: 'System Administrator', avatar: 'Admin' };
-      case 'hod':
-      default:
-        return { name: 'Dr. Kumar V.', role: 'Head of Department', avatar: 'Kumar' };
-    }
-  };
-
-  const user = getRoleUser();
+  // Use real user from AuthContext, fall back to placeholder for unauthenticated edge cases
+  const user = authUser
+    ? {
+        name: authUser.name,
+        role: ROLE_LABELS[authUser.role] || authUser.role,
+        email: authUser.email,
+        department: authUser.department,
+      }
+    : { name: 'Guest', role: 'Not signed in', email: '', department: '' };
 
   return (
     <header className="topbar">
@@ -158,48 +163,28 @@ export const Topbar = ({ onOpenNotifications, onOpenHelp }) => {
                 }}
               >
                 <div style={{ padding: '8px 10px', borderBottom: '1px solid var(--border-color-subtle)', marginBottom: '4px' }}>
-                  <div style={{ fontWeight: 600, fontSize: '13px', color: 'var(--text-primary)' }}>{user.name}</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{user.role}</div>
+                  <div style={{ fontWeight: 700, fontSize: '13px', color: 'var(--text-primary)' }}>{user.name}</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '1px' }}>{user.role}</div>
+                  {user.email && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px', fontSize: '11px', color: 'var(--text-muted)' }}>
+                      <Mail size={11} /> {user.email}
+                    </div>
+                  )}
+                  {user.department && (
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px', fontSize: '11px', color: 'var(--text-muted)' }}>
+                      <Building size={11} /> {user.department}
+                    </div>
+                  )}
                 </div>
-
-                <div style={{ padding: '4px 10px', fontSize: '10px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                  Switch Role View
-                </div>
-
-                <button
-                  className="role-option"
-                  style={{ width: '100%', textAlign: 'left', background: 'transparent' }}
-                  onClick={() => { setCurrentRole('hod'); setProfileMenuOpen(false); }}
-                >
-                  <Layers size={14} /> HOD Portal
-                </button>
-                <button
-                  className="role-option"
-                  style={{ width: '100%', textAlign: 'left', background: 'transparent' }}
-                  onClick={() => { setCurrentRole('faculty'); setProfileMenuOpen(false); }}
-                >
-                  <User size={14} /> Faculty Portal
-                </button>
-                <button
-                  className="role-option"
-                  style={{ width: '100%', textAlign: 'left', background: 'transparent' }}
-                  onClick={() => { setCurrentRole('student'); setProfileMenuOpen(false); }}
-                >
-                  <User size={14} /> Student Portal
-                </button>
-                <button
-                  className="role-option"
-                  style={{ width: '100%', textAlign: 'left', background: 'transparent' }}
-                  onClick={() => { setCurrentRole('admin'); setProfileMenuOpen(false); }}
-                >
-                  <Shield size={14} /> Admin Console
-                </button>
 
                 <div style={{ borderTop: '1px solid var(--border-color-subtle)', marginTop: '4px', paddingTop: '4px' }}>
                   <button
                     className="role-option"
                     style={{ width: '100%', textAlign: 'left', color: '#EF4444', background: 'transparent' }}
-                    onClick={() => setProfileMenuOpen(false)}
+                    onClick={async () => {
+                      setProfileMenuOpen(false);
+                      await logout();
+                    }}
                   >
                     <LogOut size={14} /> Sign Out
                   </button>
